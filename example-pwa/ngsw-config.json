@@ -1,0 +1,38 @@
+{
+  "index": "/index.html",  
+  "dataGroups": [
+    {
+      "name": "api-data",
+      "urls": [
+        "https://weatherappserverfords18.herokuapp.com/weather",
+        "http://icons.wxug.com/i/c/k/*"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 1000,
+        "maxAge": "30d"
+      }
+    }
+  ],
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/favicon.ico",
+        "/index.html",
+        "/*.css",
+        "/*.js"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ]
+    }
+  }]
+}
